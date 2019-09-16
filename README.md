@@ -20,10 +20,10 @@ Following attributes are configurable:
 
 ## Usage
 
-1. Import polyfill:
+1. Import polyfill, this is not needed for modern browsers:
 
     ```html
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/webcomponents-bundle.js"></script>
     ```
 
 2. Import custom element:
