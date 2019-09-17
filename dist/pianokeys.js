@@ -279,4 +279,4 @@ class Pianokeys extends HTMLElement {
   }
 }
 
-customElements.define('piano-keys', Pianokeys)
+customElements.define('pianokeys', Pianokeys)
