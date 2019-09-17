@@ -1,4 +1,4 @@
-# piano-keys
+# pianokeys
 A web component for creating HTML elements that depict piano keys.
 
 Live demo available at http://51.38.51.120/pianokeysdemo/
@@ -6,7 +6,7 @@ Live demo available at http://51.38.51.120/pianokeysdemo/
 ![Screenshot](keys.png)
 
 ## Features
-Piano-keys is a stand-alone vanilla JS web component that does not use shadow DOM.
+Pianokeys is a stand-alone vanilla JS web component that does not use shadow DOM.
 
 Following component attributes are configurable:
 
@@ -29,13 +29,13 @@ Following component attributes are configurable:
 2. Import custom element:
 
     ```html
-    <script defer src='piano-keys.js'></script>
+    <script defer src='pianokeys.js'></script>
     ```
 
 3. Start using it!
 
     ```html
-    <piano-keys />
+    <pianokeys />
     ```
 
 ## Attributes
