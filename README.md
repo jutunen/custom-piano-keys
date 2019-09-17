@@ -42,11 +42,11 @@ Following component attributes are configurable:
 
 Name            | Type      | Description             | Unit / Values                                | Default value
 ---             | ---       | ---                     | ---                                          | ---
-oct-count       | Number    | Number of octaves       |                                              | 1
-height          | Number    | Element height          |Height in pixels                              | 100
-oct-w-factor    | Number    | Octave width factor     |Factor producing the width from height        | 1.5
-stroke-w        | Number    | Stroke width            |0 - 100 percents of height                    | 2
-b-key-h         | Number    | Black key height        |0 - 100 percents of Height                    | 60
+oct-count       | Number    | Number of octaves       |Zero or positive integer                      | 1
+height          | Number    | Element height          |Element height in pixels                              | 100
+oct-w-factor    | Number    | Octave width factor     |Factor producing the width from element height        | 1.5
+stroke-w        | Number    | Stroke width            |0 - 100 percents of element height                    | 2
+b-key-h         | Number    | Black key height        |0 - 100 percents of element height                    | 60
 b-key-w         | Number    | Black key width         |0 - 100 percents of white key width           | 50
 marked-keys     | List      | Marked keys             |Space separated list of integers              | N/A
 mark-color      | String/Hex| Mark color              |Color keyword / 3 digit hex / 6 digit hex     | red
