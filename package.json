@@ -1,5 +1,5 @@
 {
-  "name": "pianokeys",
+  "name": "@jutunen/pianokeys",
   "version": "0.0.1",
   "description": "A web component for creating HTML elements that depict piano keys",
   "main": "dist/pianokeys-node.js",
