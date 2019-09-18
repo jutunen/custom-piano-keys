@@ -134,18 +134,13 @@ class Pianokeys extends HTMLElement {
       return
     }
 
-    var markedKeysNumberArray = markedKeysStr.trim().split(/\s+/).map(numStr => parseInt(numStr))
+    var markedKeysNumberArray = markedKeysStr.trim().split(/\s+/).map(numStr => parseInt(numStr)).filter(this._keyValueIsValid, this)
 
     if (markedKeysNumberArray.length === 0) {
       return
     }
 
-    if (markedKeysNumberArray.every(this._keyValueIsValid, this)) {
-      this._addKeyMarks(markedKeysNumberArray)
-    } // else {
-      // console.log("MarkedKeys input is invalid!")
-      // throw "Invalid marked-keys attribute"
-    // }
+    this._addKeyMarks(markedKeysNumberArray)
   }
 
   _addKeyMarks (marksArray) {
