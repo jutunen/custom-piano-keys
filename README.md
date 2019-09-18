@@ -1,5 +1,5 @@
 # custom-piano-keys
-A web component for creating HTML elements that depict piano keys.
+A web component for creating custom HTML elements that depict piano keys.
 
 Live demo available at http://51.38.51.120/pianokeysdemo/
 
@@ -18,7 +18,7 @@ Following component attributes are configurable:
 - marked keys
 - mark color, shape, diameter and shift
 
-## Usage
+## Including the component to an HTML file
 
 1. Import polyfill, this is not needed for modern browsers:
 
@@ -37,6 +37,31 @@ Following component attributes are configurable:
     ```html
     <custom-piano-keys />
     ```
+## Including the component from NPM
+
+1. Install and import polyfill, this is not needed for modern browsers:
+
+   See https://www.npmjs.com/package/@webcomponents/webcomponentsjs
+
+2. Install custom-piano-keys NPM package:
+
+    ```console
+    npm i custom-piano-keys
+    ```
+
+3. Import custom element:
+
+    ```javascript
+    import {Pianokeys} from 'custom-piano-keys'
+    ```
+
+4. Start using it:
+
+   ```javascript
+   var pianokeys = document.createElement("custom-piano-keys")
+   pianokeys.setAttribute("marked-keys", "1 5 8")
+   document.body.appendChild(pianokeys)
+   ```
 
 ## Attributes
 

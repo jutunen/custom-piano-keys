@@ -278,3 +278,5 @@ export class Pianokeys extends HTMLElement {
     return true
   }
 }
+
+customElements.define('custom-piano-keys', Pianokeys)
