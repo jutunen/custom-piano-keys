@@ -1,7 +1,7 @@
 {
   "name": "custom-piano-keys",
   "version": "0.0.4",
-  "description": "A web component for creating HTML elements that depict piano keys",
+  "description": "A web component for creating custom HTML elements that depict piano keys",
   "main": "dist/custom-piano-keys-node.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
