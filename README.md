@@ -73,13 +73,14 @@ oct-w-factor    | Number    | Octave width factor     |Factor producing the widt
 stroke-w        | Number    | Stroke width            |0 - 100 percents of element height                    | 2
 b-key-h         | Number    | Black key height        |0 - 100 percents of element height                    | 60
 b-key-w         | Number    | Black key width         |0 - 100 percents of white key width           | 50
-marked-keys     | List      | Marked keys             |Space separated list of integers              | N/A
+marked-keys     | List      | Marked keys             |Space separated list of integers*            | N/A
 mark-color      | String/Hex| Mark color              |Color keyword / 3 digit hex / 6 digit hex     | red
 mark-shape      | String    | Mark shape              | circle / rect                                | circle
 mark-diameter   | Number    | Mark diameter           |0 - 100 percents of white key width           | 40
 b-key-mark-shift| Number    | Black key mark shift    |1 - 100 percents of black key height          | 50
 w-key-mark-shift| Number    | White key mark shift    |1 - 100 percents of the white key stub height | 50
 
+*Valid values for marked-keys are integers from 1 to 96.
 
 ## License
 Copyright (c) 2019 Jussi Utunen
