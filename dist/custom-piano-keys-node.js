@@ -267,7 +267,7 @@ export class Pianokeys extends HTMLElement {
   }
 
   _keyValueIsValid (n) {
-    if (isNaN(n) || typeof n !== 'number' || n < 0 || n > this.keysLookUpArrayLength) {
+    if (isNaN(n) || typeof n !== 'number' || n < 1 || n > this.keysLookUpArrayLength) {
       return false
     }
     return true
