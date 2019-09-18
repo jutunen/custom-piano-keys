@@ -1,12 +1,12 @@
 {
   "name": "custom-piano-keys",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A web component for creating HTML elements that depict piano keys",
   "main": "dist/pianokeys-node.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-    "files": [
+  "files": [
     "dist/custom-pianokeys-node.js"
   ],
   "repository": {
