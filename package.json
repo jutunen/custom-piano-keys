@@ -1,5 +1,5 @@
 {
-  "name": "@jutunen/pianokeys",
+  "name": "custom-piano-keys",
   "version": "0.0.1",
   "description": "A web component for creating HTML elements that depict piano keys",
   "main": "dist/pianokeys-node.js",
@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
     "files": [
-    "dist/pianokeys-node.js"
+    "dist/custom-pianokeys-node.js"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jutunen/pianokeys.git"
+    "url": "git+https://github.com/jutunen/custom-piano-keys.git"
   },
   "keywords": [
     "web-component",
@@ -26,7 +26,7 @@
   "author": "Jussi Utunen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jutunen/pianokeys/issues"
+    "url": "https://github.com/jutunen/custom-piano-keys/issues"
   },
-  "homepage": "https://github.com/jutunen/pianokeys#readme"
+  "homepage": "https://github.com/jutunen/custom-piano-keys#readme"
 }
