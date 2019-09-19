@@ -41,7 +41,7 @@ Following component attributes are configurable:
 
 1. Install and import polyfill, this is not needed for modern browsers:
 
-   See https://www.npmjs.com/package/@webcomponents/webcomponentsjs
+   See https://github.com/webcomponents/polyfills/tree/master/packages/custom-elements
 
 2. Install custom-piano-keys NPM package:
 
