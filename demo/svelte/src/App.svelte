@@ -1,5 +1,5 @@
 <script>
-	let octaveCount = 2
+  let octaveCount = 2
   let elementHeight = 150
   let octWidthFactor = 1.5
   let strokeWidth = 1
@@ -19,7 +19,7 @@
   }
 
   function resetAllValues() {
-	  octaveCount = 2
+    octaveCount = 2
     elementHeight = 150
     octWidthFactor = 1.5
     strokeWidth = 1
