@@ -18,8 +18,8 @@ class Pianokeys extends HTMLElement {
     this.absMarkDiameter = this.markDiameter * this.whiteKeyWidth / 100
     this.absBlackKeyHeight = this.blackKeyHeight * this.octaveHeight / 100
     this.absBlackKeyWidth = this.blackKeyWidth * this.whiteKeyWidth / 100
-    this.strokeWidth = 2
-    this.absStrokeWidth = this.strokeWidth * this.absElementHeight / 100
+    this.sWidth = 2 //stroke width
+    this.absStrokeWidth = this.sWidth * this.absElementHeight / 100
     this.blackKeyMarkShift = 50
     this.whiteKeyMarkShift = 50
     // negative values = black keys, positive values = white keys, absolute value = ordinal number
@@ -68,7 +68,7 @@ class Pianokeys extends HTMLElement {
     } else if (name === 'b-key-w') {
       this.blackKeyWidth = Number(newValue)
     } else if (name === 'stroke-w') {
-      this.strokeWidth = Number(newValue)
+      this.sWidth = Number(newValue)
     } else if (name === 'b-key-mark-shift') {
       this.blackKeyMarkShift = Number(newValue)
     } else if (name === 'w-key-mark-shift') {
@@ -82,7 +82,7 @@ class Pianokeys extends HTMLElement {
     this.absMarkDiameter = this.markDiameter * this.whiteKeyWidth / 100
     this.absBlackKeyHeight = this.blackKeyHeight * this.octaveHeight / 100
     this.absBlackKeyWidth = this.blackKeyWidth * this.whiteKeyWidth / 100
-    this.absStrokeWidth = this.strokeWidth * this.absElementHeight / 100
+    this.absStrokeWidth = this.sWidth * this.absElementHeight / 100
 
     if (!this.pianoKeys || !this._checkAttributeValidity()) {
       return
@@ -116,7 +116,7 @@ class Pianokeys extends HTMLElement {
   }
 
   _checkAttributeValidity () {
-    if (isNaN(this.octaveCount) || isNaN(this.absElementHeight) || isNaN(this.octaveWidthFactor) || isNaN(this.markDiameter) || isNaN(this.strokeWidth) || isNaN(this.blackKeyHeight) || isNaN(this.blackKeyWidth) || isNaN(this.blackKeyMarkShift) || isNaN(this.whiteKeyMarkShift)) {
+    if (isNaN(this.octaveCount) || isNaN(this.absElementHeight) || isNaN(this.octaveWidthFactor) || isNaN(this.markDiameter) || isNaN(this.sWidth) || isNaN(this.blackKeyHeight) || isNaN(this.blackKeyWidth) || isNaN(this.blackKeyMarkShift) || isNaN(this.whiteKeyMarkShift)) {
       return false
     }
     return true
