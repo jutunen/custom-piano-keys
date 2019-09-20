@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "dist/custom-piano-keys-node.js"
+    "dist/custom-piano-keys-node.min.js"
   ],
   "repository": {
     "type": "git",
