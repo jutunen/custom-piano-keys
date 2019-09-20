@@ -2,12 +2,13 @@
   "name": "custom-piano-keys",
   "version": "0.0.8",
   "description": "A web component for creating custom HTML elements that depict piano keys",
-  "main": "dist/custom-piano-keys-node.js",
+  "main": "dist/custom-piano-keys-node.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "dist/custom-piano-keys-node.min.js"
+    "dist/custom-piano-keys-node.min.js",
+    "dist/custom-piano-keys-node.js"
   ],
   "repository": {
     "type": "git",
