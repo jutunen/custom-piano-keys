@@ -57,7 +57,7 @@ Following component attributes are configurable:
 3. Import custom element:
 
     ```javascript
-    import {Pianokeys} from 'custom-piano-keys'
+    import 'custom-piano-keys'
     ```
 
 4. Start using it:
