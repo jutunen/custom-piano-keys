@@ -1,4 +1,4 @@
-*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+*Copy custom-piano-keys.js in to public directory before building!*
 
 ---
 
