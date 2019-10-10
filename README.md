@@ -6,7 +6,7 @@
 # custom-piano-keys
 A web component for creating custom HTML elements that depict piano keys.
 
-Live demo available at http://51.38.51.120/pianokeysdemo/
+Live demos available at [here](http://51.38.51.120/pianokeysdemo/) and [here](http://51.38.51.120/pianokeysdemo_2/)
 
 ![Screenshot](keys.png)
 
