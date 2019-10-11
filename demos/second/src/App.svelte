@@ -110,7 +110,6 @@
 
 <style>
 
-
   #right_triangle {
     width: 0;
     height: 0;
@@ -164,6 +163,7 @@
     font-size: 14px;
     margin-top: 80px;
     margin-bottom: 20px;
+    text-align: center;
   }
 
 </style>
@@ -188,6 +188,9 @@
     </div>
   </div>
   <div id="footer">
-    this page was made with &heartsuit; and  <a href="https://svelte.dev/" target="_blank">Svelte</a>
+    This page was made with &heartsuit; and  <a href="https://svelte.dev/" target="_blank">Svelte</a>
+    <br>
+    <br>
+    This demo is available from <a href="https://github.com/jutunen/custom-piano-keys/tree/master/demos/second" target="_blank">GitHub
   </div>
 </div>
