@@ -66,7 +66,7 @@
 <style>
   .range {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     background-color: #ebf6f9;
     padding: 5px;
     margin-bottom: 10px;
@@ -148,7 +148,7 @@
 
 <div id="container">
   <div id="description">
-    custom-piano-keys web component is available from <a href="https://github.com/jutunen/custom-piano-keys" target="_blank">GitHub</a>
+    custom-piano-keys web component is available from <a href="https://github.com/jutunen/custom-piano-keys" target="_blank">GitHub</a> and <a href="https://www.npmjs.com/package/custom-piano-keys" target="_blank">NPM registry</a>
   </div>
   <div id="title">
     <piano-keys height=30 />
@@ -236,7 +236,7 @@
     <button on:click={resetAllValues} type='button'>Reset all</button>
     &nbsp;
     &nbsp;
-    <button on:click={saveToFile} type='button'>Save to file as SVG image</button>
+    <button on:click={saveToFile} type='button'>Save to file as an SVG image</button>
   </div>
 
   <div class="keys_container">

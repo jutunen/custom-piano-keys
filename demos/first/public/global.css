@@ -9,7 +9,6 @@ body {
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 a {
@@ -43,10 +42,6 @@ input:disabled {
 	color: #ccc;
 }
 
-input[type="range"] {
-	height: 0;
-}
-
 button {
 	color: #333;
 	background-color: #f4f4f4;
@@ -59,4 +54,46 @@ button:active {
 
 button:focus {
 	border-color: #666;
+}
+
+input[type="range"]::-ms-track {
+    background: #ccc;
+    height: 4px;
+    border-radius: 4px;
+    border: none;
+    color: transparent;
+}
+
+input[type="range"]:hover::-ms-track,
+input[type="range"]:focus::-ms-track {
+    background: #777;
+}
+
+input[type="range"]::-ms-thumb {
+    background: blue;
+    width: 6px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 4px 0;
+    box-shadow: 0 0 0 4px #fff;
+}
+
+input[type="range"]:hover::-ms-thumb,
+input[type="range"]:focus::-ms-thumb {
+    background: black;
+}
+
+input[type="range"]::-ms-tooltip {
+    display: none;
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: blue;
+    border-radius: 4px;
+}
+
+input[type="range"]:hover::-ms-fill-lower,
+input[type="range"]:focus::-ms-fill-lower {
+    background: black;
 }
