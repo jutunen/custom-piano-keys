@@ -91,7 +91,7 @@ w-key-mark-shift| Number    | White key mark shift    |1 - 100 percents of the w
 
 ## Methods
 
-Keys can be marked directly by calling the setMarkedKeys method of the custom element instance.
+Keys can be marked directly by calling the *setMarkedKeys* method of the custom element instance.
 
 Method has a single argument: an array of integers. Valid values in the array are integers from 1 to 96.
 
