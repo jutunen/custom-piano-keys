@@ -4,7 +4,8 @@ class Pianokeys extends HTMLElement {
     super()
     this.octaveCount = 1
     this.absElementHeight = 100
-    this.markedKeys = ''
+    this.markedKeysStr = ''
+    this.markedKeysNumArray = []
     this.pianoKeys = undefined
     this.markColor = 'red'
     this.markShape = 'circle'
@@ -56,7 +57,8 @@ class Pianokeys extends HTMLElement {
       this.whiteKeyWidth = this.octaveWidth / 7
       this.octaveHeight = this.absElementHeight
     } else if (name === 'marked-keys') {
-      this.markedKeys = newValue
+      this.markedKeysStr = newValue
+      this.markedKeysNumArray = []
     } else if (name === 'mark-color') {
       this.markColor = newValue
     } else if (name === 'mark-diameter') {
@@ -94,14 +96,14 @@ class Pianokeys extends HTMLElement {
       this.pianoKeys = this.querySelector('#keys')
       this._setHeight()
 
-      if (this.markedKeys) {
-        this._handleMarkedKeysInput(this.markedKeys)
+      if (this.markedKeysStr || this.markedKeysNumArray.length > 0) {
+        this._handleMarkedKeysInput(this.markedKeysStr, this.markedKeysNumArray)
       }
     } else if (name === 'marked-keys' || name === 'mark-color' || name === 'mark-shape' || name === 'mark-diameter' || name === 'b-key-mark-shift' || name === 'w-key-mark-shift') {
       while (this.pianoKeys.querySelector('.keymark') !== null) {
         this.pianoKeys.removeChild(this.pianoKeys.querySelector('.keymark'))
       }
-      this._handleMarkedKeysInput(this.markedKeys)
+      this._handleMarkedKeysInput(this.markedKeysStr, this.markedKeysNumArray)
     }
   }
 
@@ -113,6 +115,20 @@ class Pianokeys extends HTMLElement {
     if (this.hasAttribute('marked-keys')) {
       this._handleMarkedKeysInput(this.getAttribute('marked-keys'))
     }
+  }
+
+  setMarkedKeys ( keys ) {
+    if(!Array.isArray(keys)) {
+      return
+    }
+    while (this.pianoKeys.querySelector('.keymark') !== null) {
+      this.pianoKeys.removeChild(this.pianoKeys.querySelector('.keymark'))
+    }
+    if(keys.length > 0) {
+      this._addKeyMarks( keys )
+    }
+    this.markedKeysNumArray = keys.slice()
+    this.markedKeysStr = ''
   }
 
   _checkAttributeValidity () {
@@ -129,8 +145,13 @@ class Pianokeys extends HTMLElement {
     this.pianoKeys.style.verticalAlign = 'middle'
   }
 
-  _handleMarkedKeysInput (markedKeysStr) {
-    if (markedKeysStr.length === 0) {
+  _handleMarkedKeysInput (markedKeysStr, markedKeysArray = []) {
+    if (markedKeysStr.length === 0 && markedKeysArray.length === 0) {
+      return
+    }
+
+    if(markedKeysArray.length > 0) {
+      this._addKeyMarks(markedKeysArray)
       return
     }
 
