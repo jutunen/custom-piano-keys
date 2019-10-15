@@ -95,16 +95,16 @@ Keys can be marked directly by calling the setMarkedKeys method of the custom el
 
 Method has a single argument: an array of integers. Valid values in the array are integers from 1 to 96.
 
-Marks can be removed by using an empty array as an argument.
+Marks can be removed by providing an empty array as an argument.
 
-### Usage example:
+#### Usage example:
 
    ```javascript
    var pianokeys = document.createElement("custom-piano-keys")
    pianokeys.setMarkedKeys([1,5,8])
    document.body.appendChild(pianokeys)
    ```
-### Removing the marks:
+#### Removing the marks:
 
    ```javascript
    pianokeys.setMarkedKeys([])
