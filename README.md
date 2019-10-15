@@ -85,9 +85,30 @@ mark-diameter   | Number    | Mark diameter           |0 - 100 percents of white
 b-key-mark-shift| Number    | Black key mark shift    |1 - 100 percents of black key height          | 50
 w-key-mark-shift| Number    | White key mark shift    |1 - 100 percents of the white key stub height | 50
 
-*Valid values for marked-keys are integers from 1 to 96.
+*Valid values for marked-keys are integers from 1 to 96. Setting a new value will remove the previous marks.
 
 **Setting color to black will display black marks on white keys and white marks on black keys
+
+## Methods
+
+Keys can be marked directly by calling the setMarkedKeys method of the custom element instance.
+
+Method has a single argument: an array of integers. Valid values in the array are integers from 1 to 96.
+
+Marks can be removed by using an empty array as an argument.
+
+### Usage example:
+
+   ```javascript
+   var pianokeys = document.createElement("custom-piano-keys")
+   pianokeys.setMarkedKeys([1,5,8])
+   document.body.appendChild(pianokeys)
+   ```
+### Removing the marks:
+
+   ```javascript
+   pianokeys.setMarkedKeys([])
+   ```
 
 ## License
 Copyright (c) 2019 Jussi Utunen
