@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   import Tone from 'tone'
   var polySynth = new Tone.PolySynth(3, Tone.Synth).toMaster();
   var notes = ['C4','C#4','D4','D#4','E4','F4','F#4','G4','G#4','A4','A#4','B4','C5','C#5','D5','D#5','E5','F5','F#5','G5','G#5','A5','A#5','B5']
@@ -6,90 +7,90 @@
   var tempo = 140
   var playState = 'stopped'
   var buttonSign = 'right_triangle'
+  var customKeys
 
-  function setMarkedKeys(chordNotesRef)
-  {
-    markedKeys = chordNotesRef.map(x => notes.indexOf(x) + 1).reduce((x,y) => x + " " + y )
-  }
+  onMount(() => {
+    customKeys = document.getElementById('keys')
+  })
 
   function chord_1(time){
     var chordNotes = ['C#5', 'F#5', 'A5']
-    setMarkedKeys(chordNotes)
+    customKeys.setMarkedKeys(chordNotes.map(x => notes.indexOf(x) + 1))
     polySynth.triggerAttackRelease(chordNotes, "16n", time)
   }
 
   function chord_2(time){
     var chordNotes = ['C#5', 'E5', 'A5']
-    setMarkedKeys(chordNotes)
+    customKeys.setMarkedKeys(chordNotes.map(x => notes.indexOf(x) + 1))
     polySynth.triggerAttackRelease(chordNotes, "16n", time)
   }
 
   function chord_3(time){
     var chordNotes = ['B4', 'D5', 'A5']
-    setMarkedKeys(chordNotes)
+    customKeys.setMarkedKeys(chordNotes.map(x => notes.indexOf(x) + 1))
     polySynth.triggerAttackRelease(chordNotes, "16n", time)
   }
 
   function chord_4(time){
     var chordNotes = ['B4', 'E5', 'G#5']
-    setMarkedKeys(chordNotes)
+    customKeys.setMarkedKeys(chordNotes.map(x => notes.indexOf(x) + 1))
     polySynth.triggerAttackRelease(chordNotes, "16n", time)
   }
 
   function chord_5(time){
     var chordNotes = ['B4', 'E5', 'A5']
-    setMarkedKeys(chordNotes)
+    customKeys.setMarkedKeys(chordNotes.map(x => notes.indexOf(x) + 1))
     polySynth.triggerAttackRelease(chordNotes, "16n", time)
   }
 
   Tone.Transport.schedule(chord_1, 0)
-  Tone.Transport.schedule(() => markedKeys = '', '0:0:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '0:0:1')
   Tone.Transport.schedule(chord_1, '0:0:2')
-  Tone.Transport.schedule(() => markedKeys = '', '0:0:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '0:0:3')
   Tone.Transport.schedule(chord_1, '0:1')
-  Tone.Transport.schedule(() => markedKeys = '', '0:1:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '0:1:1')
   Tone.Transport.schedule(chord_1, '0:1:2')
-  Tone.Transport.schedule(() => markedKeys = '', '0:1:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '0:1:3')
   Tone.Transport.schedule(chord_1, '0:2')
-  Tone.Transport.schedule(() => markedKeys = '', '0:2:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '0:2:1')
   Tone.Transport.schedule(chord_1, '0:2:2')
-  Tone.Transport.schedule(() => markedKeys = '', '0:2:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '0:2:3')
   Tone.Transport.schedule(chord_2, '0:3')
-  Tone.Transport.schedule(() => markedKeys = '', '0:3:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '0:3:1')
   Tone.Transport.schedule(chord_2, '0:3:2')
-  Tone.Transport.schedule(() => markedKeys = '', '0:3:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '0:3:3')
   Tone.Transport.schedule(chord_3, '1:0:0')
-  Tone.Transport.schedule(() => markedKeys = '', '1:0:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '1:0:1')
   Tone.Transport.schedule(chord_3, '1:0:2')
-  Tone.Transport.schedule(() => markedKeys = '', '1:0:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '1:0:3')
   Tone.Transport.schedule(chord_3, '1:1')
-  Tone.Transport.schedule(() => markedKeys = '', '1:1:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '1:1:1')
   Tone.Transport.schedule(chord_3, '1:1:2')
-  Tone.Transport.schedule(() => markedKeys = '', '1:1:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '1:1:3')
   Tone.Transport.schedule(chord_4, '1:2')
-  Tone.Transport.schedule(() => markedKeys = '', '1:2:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '1:2:1')
   Tone.Transport.schedule(chord_4, '1:2:2')
-  Tone.Transport.schedule(() => markedKeys = '', '1:2:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '1:2:3')
   Tone.Transport.schedule(chord_4, '1:3')
-  Tone.Transport.schedule(() => markedKeys = '', '1:3:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '1:3:1')
   Tone.Transport.schedule(chord_4, '1:3:2')
-  Tone.Transport.schedule(() => markedKeys = '', '1:3:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '1:3:3')
   Tone.Transport.schedule(chord_4, '2:0:0')
-  Tone.Transport.schedule(() => markedKeys = '', '2:0:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '2:0:1')
   Tone.Transport.schedule(chord_4, '2:0:2')
-  Tone.Transport.schedule(() => markedKeys = '', '2:0:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '2:0:3')
   Tone.Transport.schedule(chord_5, '2:1')
-  Tone.Transport.schedule(() => markedKeys = '', '2:1:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '2:1:1')
   Tone.Transport.schedule(chord_5, '2:1:2')
-  Tone.Transport.schedule(() => markedKeys = '', '2:1:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '2:1:3')
   Tone.Transport.schedule(chord_5, '2:2')
-  Tone.Transport.schedule(() => markedKeys = '', '2:2:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '2:2:1')
   Tone.Transport.schedule(chord_4, '2:2:2')
-  Tone.Transport.schedule(() => markedKeys = '', '2:2:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '2:2:3')
   Tone.Transport.schedule(chord_4, '2:3')
-  Tone.Transport.schedule(() => markedKeys = '', '2:3:1')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '2:3:1')
   Tone.Transport.schedule(chord_4, '2:3:2')
-  Tone.Transport.schedule(() => markedKeys = '', '2:3:3')
+  Tone.Transport.schedule(() => customKeys.setMarkedKeys([]), '2:3:3')
 
   Tone.Transport.loopEnd = '3m'
   Tone.Transport.loop = true
@@ -99,7 +100,7 @@
     Tone.Transport.toggle()
     playState = Tone.Transport.state
     buttonSign = playState === 'stopped' ? 'right_triangle' : 'square'
-    setTimeout(() => { if(playState === 'stopped') { markedKeys = '' } }, 100)
+    setTimeout(() => { if(playState === 'stopped') { customKeys.setMarkedKeys([]) } }, 100)
   }
 
   function updateTempo() {
@@ -176,7 +177,7 @@
   <div id="introduction">
     <a href="https://github.com/jutunen/custom-piano-keys" target="_blank">Custom-piano-keys</a> does not have any playback features. In the following, audio playback and scheduling features of the awesome <a href="https://tonejs.github.io/" target="_blank">Tone.js</a> library are utilized together with custom-piano-keys element to display the played notes in real-time. Press play!
   </div>
-  <custom-piano-keys height='150' oct-count='2' oct-w-factor='1.5' marked-keys={markedKeys} />
+  <custom-piano-keys id='keys' height='150' oct-count='2' oct-w-factor='1.5' />
   <div id="controls">
     <button class="button" on:click={togglePlayback} type='button'><div id={buttonSign}></div></button>
     <div id="tempo">
