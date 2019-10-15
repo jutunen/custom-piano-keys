@@ -78,7 +78,7 @@ oct-w-factor    | Number    | Octave width factor     |Factor producing the widt
 stroke-w        | Number    | Stroke width            |0 - 100 percents of element height                    | 2
 b-key-h         | Number    | Black key height        |0 - 100 percents of element height                    | 60
 b-key-w         | Number    | Black key width         |0 - 100 percents of white key width           | 50
-marked-keys     | List      | Marked keys             |Space separated list of integers*            | N/A
+marked-keys     | String    | Marked keys             |Space separated list of integers*             | N/A
 mark-color      | String/Hex| Mark color              |Color keyword / 3 digit hex / 6 digit hex**     | red
 mark-shape      | String    | Mark shape              | circle / rect                                | circle
 mark-diameter   | Number    | Mark diameter           |0 - 100 percents of white key width           | 40
@@ -96,6 +96,8 @@ Keys can be marked directly by calling the *setMarkedKeys* method of the custom 
 Method has a single argument: an array of integers. Valid values in the array are integers from 1 to 96.
 
 Marks can be removed by providing an empty array as an argument.
+
+Keys can also be marked by setting the *marked-keys* attribute value. Using *setMarkedKeys* method is an alternative way to set marks on keys by using an array instead of string.
 
 #### Usage example:
 
