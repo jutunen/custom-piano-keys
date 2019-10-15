@@ -1,12 +1,12 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/custom-piano-keys)
 [![npm version](https://badge.fury.io/js/custom-piano-keys.svg)](https://badge.fury.io/js/custom-piano-keys)
 [![minified](https://badgen.net/badge/minified/5%20kB/blue)](https://badgen.net/badge/minified/5%20kB/blue)
-[![minified & compressed](https://badgen.net/badge/minified%20&%20compressed/2%20kB/blue)](https://badgen.net/badge/minified%20&%20compressed/2%20kB/blue)
+[![minified & zipped](https://badgen.net/badge/minified%20&%20compressed/2%20kB/blue)](https://badgen.net/badge/minified%20&%20compressed/2%20kB/blue)
 
 # custom-piano-keys
 A web component for creating custom HTML elements that depict piano keys.
 
-Live demos available at [here](http://51.38.51.120/pianokeysdemo/) and [here](http://51.38.51.120/pianokeysdemo_2/)
+2 live demos available [here](http://51.38.51.120/pianokeysdemo/) and [here](http://51.38.51.120/pianokeysdemo_2/)
 
 ![Screenshot](keys.png)
 
