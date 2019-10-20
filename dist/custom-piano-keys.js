@@ -112,8 +112,8 @@ class Pianokeys extends HTMLElement {
     this.appendChild(this._generateKeys())
     this.pianoKeys = this.querySelector('#keys')
     this._setHeight()
-    if (this.hasAttribute('marked-keys')) {
-      this._handleMarkedKeysInput(this.getAttribute('marked-keys'))
+    if (this.markedKeysStr || this.markedKeysNumArray.length > 0) {
+      this._handleMarkedKeysInput(this.markedKeysStr, this.markedKeysNumArray)
     }
   }
 
@@ -121,11 +121,13 @@ class Pianokeys extends HTMLElement {
     if(!Array.isArray(keys)) {
       return
     }
-    while (this.pianoKeys.querySelector('.keymark') !== null) {
-      this.pianoKeys.removeChild(this.pianoKeys.querySelector('.keymark'))
-    }
-    if(keys.length > 0) {
-      this._addKeyMarks( keys )
+    if(this.pianoKeys) {
+      while (this.pianoKeys.querySelector('.keymark') !== null) {
+        this.pianoKeys.removeChild(this.pianoKeys.querySelector('.keymark'))
+      }
+      if(keys.length > 0 ) {
+        this._addKeyMarks( keys )
+      }
     }
     this.markedKeysNumArray = keys.slice()
     this.markedKeysStr = ''
