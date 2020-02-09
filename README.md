@@ -28,7 +28,7 @@ Following component attributes are configurable:
 1. Import polyfill, this is not needed for modern browsers:
 
     ```html
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.2.4/custom-elements.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.3.2/custom-elements.min.js"></script>
     ```
 
 2. Import custom element:
