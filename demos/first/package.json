@@ -12,6 +12,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "custom-piano-keys": "^0.0.13",
+    "file-saver": "^2.0.2",
     "sirv-cli": "^0.4.4"
   },
   "scripts": {

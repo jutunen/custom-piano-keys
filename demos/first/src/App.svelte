@@ -1,4 +1,7 @@
 <script>
+
+  import 'custom-piano-keys';
+
   let octaveCount = 2
   let elementHeight = 150
   let octWidthFactor = 1.5
@@ -165,7 +168,7 @@
       <div class="range">
         Element height
         <input type="range" min="10" max="500" bind:value={elementHeight}>
-        <input type="text" bind:value={elementHeight} size=1>
+        <input type="text" bind:value={elementHeight} size=2>
         px
       </div>
       <div class="range">
@@ -256,7 +259,7 @@
       <div class="bold_text">HTML tag with all attributes:</div>
       {`<custom-piano-keys oct-count=${octaveCount} height=${elementHeight} oct-w-factor=${octWidthFactor} stroke-w=${strokeWidth} b-key-w=${blackKeyWidth} b-key-h=${blackKeyHeight} marked-keys='${markedKeys}'`}
       <br>
-      {`mark-diameter=${markDiameter} mark-color=${markColor} mark-shape=${markShape} b-key-mark-shift=${blackKeyMarkShift} w-key-mark-shift=${whiteKeyMarkShift} />`}
+      {`mark-diameter=${markDiameter} mark-color=${markColor} mark-shape=${markShape} b-key-mark-shift=${blackKeyMarkShift} w-key-mark-shift=${whiteKeyMarkShift}> </custom-piano-keys>`}
     </div>
   </div>
 
@@ -269,7 +272,7 @@
     <custom-piano-keys />
     <div class="html_example">
       <div class="bold_text">HTML tag without attributes:</div>
-      {`<custom-piano-keys />`}
+      {`<custom-piano-keys> </custom-piano-keys>`}
     </div>
   </div>
 

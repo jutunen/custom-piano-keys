@@ -1,6 +1,3 @@
-*Copy custom-piano-keys.js in to public directory before building!*
-
----
 
 # svelte app
 
