@@ -40,7 +40,7 @@ Following component attributes are configurable:
 3. Start using it!
 
     ```html
-    <custom-piano-keys />
+    <custom-piano-keys> </custom-piano-keys>
     ```
 ## Including the component from NPM
 
